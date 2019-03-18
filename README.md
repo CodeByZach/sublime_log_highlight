@@ -6,14 +6,14 @@
 Log Highlight helps to view a log (any type) with customizable error/warning syntax & color scheme & extensible severity levels.
 Open a log file (like .log) and run __*Log Highlight*__ in the context menu or __*Log Highlight : Highlight Error/Warning*__ in the command palette.
 
-(Compile Log - auto-highlight off)  
-![Image of Log Highlight](https://raw.githubusercontent.com/poucotm/Links/master/image/Log-Highlight/lh-log.gif)
+(Compile Log - auto-highlight off)
+![Image of Log Highlight](docs/lh-log.gif)
 
-(Build Window - auto-highlight on)  
-![Image of Log Highlight](https://raw.githubusercontent.com/poucotm/Links/master/image/Log-Highlight/lh-build.gif)
+(Build Window - auto-highlight on)
+![Image of Log Highlight](docs/lh-build.gif)
 
-(System Log - auto-highlight off)  
-![Image of Log Highlight](https://raw.githubusercontent.com/poucotm/Links/master/image/Log-Highlight/lh-system.gif)
+(System Log - auto-highlight off)
+![Image of Log Highlight](docs/lh-system.gif)
 
 ## Features
 ***********
@@ -39,8 +39,8 @@ You can add, remove, change severity levels like debug/notice/emergency in __*Lo
 
 #### Separate Log Types
 
-You can set the log type in settings  
-. "compile" type : link / summary / bookmark can be activated  
+You can set the log type in settings
+. "compile" type : link / summary / bookmark can be activated
 . "system" type  : color-highlight only (fast)
 
 #### Bookmarks
@@ -73,11 +73,11 @@ Log Highlight can be used for Build Window or Unsaved View. But relative path li
 
 ### Settings
 
-Please, refer to [__Log Highlight.sublime-settings__](https://github.com/poucotm/Log-Highlight/blob/master/Log%20Highlight.sublime-settings), Available Icons : [__Icon List__](https://github.com/poucotm/Log-Highlight/tree/master/icons)
+Please, refer to [__Log Highlight.sublime-settings__](https://github.com/EatBreatheCode/sublime_log_highlight/blob/master/Log%20Highlight.sublime-settings), Available Icons : [__Icon List__](https://github.com/EatBreatheCode/sublime_log_highlight/tree/master/icons)
 
 - __Regular Expression Pattern in Settings__
 
-*Usage*   : `[ "begin regex", "end regex" ] or [ "match regex", "" ]`  
+*Usage*   : `[ "begin regex", "end regex" ] or [ "match regex", "" ]`
 *Caution* : avoid OR '|' and separate them, it can make an unexpected result.
 
 example)
@@ -95,17 +95,5 @@ error ../src/foo.cpp:40
 
 - __Restore Settings__
 
-Use __*Log Highlight: Erase Custom Syntax & Theme*__ in the command palette Or  
+Use __*Log Highlight: Erase Custom Syntax & Theme*__ in the command palette Or
 Just remove __*Packages/User/Log Highlight.tmLanguage*__, __*Log Highlight.hidden-tmTheme*__
-
-### Donate
-
-[![Doate Image](https://raw.githubusercontent.com/poucotm/Links/master/image/PayPal/donate-paypal.png)][PM]  
-Thank you for donating. It is helpful to continue to improve the plug-in.
-
-### Issues
-
-When you have an issue, tell me through [https://github.com/poucotm/Log-Highlight/issues](https://github.com/poucotm/Log-Highlight/issues), or send me an e-mail poucotm@gmail.com
-
-[PP]:https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=89YVNDSC7DZHQ "PayPal"
-[PM]:https://www.paypal.me/poucotm/2.5 "PayPal"
