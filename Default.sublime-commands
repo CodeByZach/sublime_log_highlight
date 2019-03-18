@@ -1,14 +1,5 @@
 [
-    {
-        "caption": "Log Highlight: Highlight Error/Warning",
-        "command": "log_highlight"
-    },
-    {
-        "caption": "Log Highlight: Generate Custom Syntax & Theme",
-        "command": "log_highlight_gen_custom_syntax_theme"
-    },
-    {
-        "caption": "Log Highlight: Erase Custom Syntax & Theme",
-        "command": "log_highlight_erase_custom_syntax_theme"
-    }
+	{ "caption": "Log Highlight: Highlight Error/Warning", "command": "log_highlight" },
+	{ "caption": "Log Highlight: Generate Custom Syntax & Theme", "command": "log_highlight_gen_custom_syntax_theme" },
+	{ "caption": "Log Highlight: Erase Custom Syntax & Theme", "command": "log_highlight_erase_custom_syntax_theme" }
 ]

@@ -1,108 +1,109 @@
 {
-
-	/*  Configuration  ____________________________________________
-	*/
-
-	// enable context menu
+	// Enable context menu.
 	"context_menu": true,
 
-	// Auto Highlight for a log file, build window
-	"auto_highlight" : true,
+	// Auto Highlight for a log file, build window.
+	"auto_highlight": true,
 
-	// log file extension
-	"log_ext": [ ".log" ], // use ".*" for all file extensions - but can not use `Auto Highlight`
+	// Log file extension
+	"log_ext": [ ".log" ], // Use ".*" for all file extensions - but can not use "Auto Highlight".
 
-	// "compile" - link, summary, bookmark are usable, "system" - only for highlight
+	// "compile" - link, summary, bookmark are usable, "system" - only for highlight.
 	"log_type": "compile",
 
-	/*  Options for `compile` type log  ___________________________
-	*/
-
-	// use clickable link or not
+	// Use clickable link or not.
 	"use_link": true,
 
-	// search base directory automatically for relative path
+	// Search base directory automatically for relative path.
 	"search_base": {
-		"enable" : true,
-		// hidden folders are ignored as default, like .git, .svn
-		"ignore_dir" : [""],
-		// adjust when using network like samba
-		"max_scan_path" : 1000
+		"enable": true,
+		// Hidden folders are ignored as default, like .git, .svn
+		"ignore_dir": [""],
+		// Adjust when using network like samba.
+		"max_scan_path": 1000
 	},
 
-	// summary panel
-	"summary_panel": true,         // show summary panel
+	// Show summary panel.
+	"summary_panel": true,
 
-	// bookmark
-	"bookmark_enable": true,       // enable/disable bookmarks
-	"bookmark_goto_error": true,   // automatically go to 1st error line
+	// Enable/disable bookmarks.
+	"bookmark_enable": true,
+	// Automatically go to 1st error line.
+	"bookmark_goto_error": true,
 
-	/*  Log Syntax, Color scheme  _________________________________
-	*/
-
-	// severity level
-	"severity" : {
-
-		// error __________________________________________________
-		"error" : {
-			"enable"  : true,
-			"summary" : true,
-			"pattern" : [
+	// Log Syntax, Color scheme (severity level).
+	"severity": {
+		"error": {
+			"enable": true,
+			"summary": true,
+			"pattern": [
 				// [ "begin regex", "end regex" ] or [ "match regex", "" ]
 				[ "^Error-\\[", "^\\s*[\\n]" ],                      // Error-[ ~ next empty line (multi-line)
-				[ "^{{{LINK}}}?[^\\r\\n]*?(?i)error", "[\\r\\n]" ],  // a line including case-insensitive 'error' with or without a link in front of 'error'
+				[ "^{{{LINK}}}?[^\\r\\n]*?(?i)error", "[\\r\\n]" ],  // A line including case-insensitive 'error' with or without a link in front of 'error'.
 				[ "^\\w+:\\s*\\*E", "[\\r\\n]" ]                     // ...: *E ... (single line)
 				// <-- Remove, Change, Add More Patterns Here -->
 			],
-			"color" : {
-				"base"  : "#F92672", // error message
-				"link"  : "#E6DB74", // link in error message
-				"quote" : "#4F99D3"  // quote in error message
+			"color": {
+				// Error message.
+				"base": "#F92672",
+				// Link in error message.
+				"link": "#E6DB74",
+				// Quote in error message.
+				"quote": "#4F99D3"
 			},
-			"icon"  : "Danish Royalty/error.png"   // remove "icon" not to use icon, "dot", "circle" "bookmark" are possible
+			// Remove "icon" not to use icon, "dot", "circle" "bookmark" are possible.
+			"icon": "Danish Royalty/error.png"
 		},
 
-		// warning ________________________________________________
-		"warning" : {
-			"enable"  : true,
-			"summary" : true,
-			"pattern" : [
+		// Warning.
+		"warning": {
+			"enable": true,
+			"summary": true,
+			"pattern": [
 				// [ "begin regex", "end regex" ] or [ "match regex", "" ]
 				[ "^Warning-\\[", "^\\s*[\\n]" ],                    // Warning-[ ~ next empty line (multi-line)
-				[ "^{{{LINK}}}?[^\\r\\n]*?(?i)warning", "[\\r\\n]" ],// a line including case-insensitive 'warning' with or without a link in front of 'warning'
+				[ "^{{{LINK}}}?[^\\r\\n]*?(?i)warning", "[\\r\\n]" ],// A line including case-insensitive 'warning' with or without a link in front of 'warning'.
 				[ "^\\w+:\\s*\\*W", "[\\r\\n]" ]                     // ...: *W ... (single line)
 				// <-- Remove, Change, Add More Patterns Here -->
 			],
-			"color" : {
-				"base"  : "#A1B347", // warning message
-				"link"  : "#FD971F", // link in warning message
-				"quote" : "#4F99D3"  // quote in warning message
+			"color": {
+				// Warning message.
+				"base": "#A1B347",
+				// Link in warning message.
+				"link": "#FD971F",
+				// Quote in warning message.
+				"quote": "#4F99D3"
 			},
-			"icon"  : "Danish Royalty/warning.png" // remove "icon" not to use icon, "dot", "circle" "bookmark" are possible
+			// Remove "icon" not to use icon, "dot", "circle" "bookmark" are possible.
+			"icon": "Danish Royalty/warning.png"
 		},
 
-		// info ___________________________________________________
-		"info" : {
-			"enable"  : false,
-			"summary" : false,
-			"pattern" : [
+		// Info.
+		"info": {
+			"enable": false,
+			"summary": false,
+			"pattern": [
 				// [ "begin regex", "end regex" ] or [ "match regex", "" ]
-				[ "^Information-\\[", "^\\s*[\\n]" ],                // Information-[ ~ next empty line (multi-line)
-				[ "^\\[INFO\\]", "[\\r\\n]" ]                        // [INFO] ... (single line)
+				[ "^Information-\\[", "^\\s*[\\n]" ], // Information-[ ~ next empty line (multi-line)
+				[ "^\\[INFO\\]", "[\\r\\n]" ]         // [INFO] ... (single line)
 				// <-- Remove, Change, Add More Patterns Here -->
 			],
-			"color" : {
-				"base"  : "#70991f", // info message
-				"link"  : "#b36915", // link in info message
-				"quote" : "#428a99"  // quote in info message
+			"color": {
+				// Info message.
+				"base": "#70991f",
+				// Link in info message.
+				"link": "#b36915",
+				// Quote in info message.
+				"quote": "#428a99"
 			},
-			"icon"  : "Danish Royalty/info.png"    // remove "icon" not to use icon, "dot", "circle" "bookmark" are possible
-		}
+			// Remove "icon" not to use icon, "dot", "circle" "bookmark" are possible.
+			"icon": "Danish Royalty/info.png"
+		},
 
 		// <-- Remove, Change, Add More Severity Level Here -->
 	},
 
-	// theme color set
+	// Theme color set.
 	"theme_color": {
 		"background"      : "#161C23",
 		"foreground"      : "#D7D7D7",

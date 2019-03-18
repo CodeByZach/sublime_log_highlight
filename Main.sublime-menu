@@ -16,17 +16,86 @@
 						"children":
 						[
 							{
-								"command": "open_file",
-								"args": {"file": "${packages}/Log Highlight/README.md"},
-								"caption": "README"
+								"caption": "Settings",
+								"command": "edit_settings",
+								"args":
+								{
+									"base_file": "${packages}/Log Highlight/Log Highlight.sublime-settings",
+									"default": "{\n\t$0\n}\n"
+								}
 							},
 							{ "caption": "-" },
 							{
-								"caption": "Settings",
+								"caption": "Key Bindings",
 								"command": "edit_settings",
-								"args": {
-									"base_file": "${packages}/Log Highlight/Log Highlight.sublime-settings"
+								"args":
+								{
+									"base_file": "${packages}/Log Highlight/Default (${platform}).sublime-keymap",
+									"default": "[\n\t$0\n]\n"
 								}
+							},
+							{ "caption": "-" },
+							{
+								"caption": "Menus",
+								"children":
+								[
+									{
+										"caption": "Context Menu",
+										"command": "z_edit_settings",
+										"args":
+										{
+											"is_parent_setting": "1",
+											"base_file": "${packages}/Log Highlight/Context.sublime-menu",
+											"default": "[\n\t$0\n]\n"
+										}
+									},
+									{
+										"caption": "Side Bar Menu",
+										"command": "z_edit_settings",
+										"args":
+										{
+											"is_parent_setting": "1",
+											"base_file": "${packages}/Log Highlight/Side Bar.sublime-menu",
+											"default": "[\n\t$0\n]\n"
+										}
+									},
+									{
+										"caption": "Tab Menu",
+										"command": "z_edit_settings",
+										"args":
+										{
+											"is_parent_setting": "1",
+											"base_file": "${packages}/Log Highlight/Tab Context.sublime-menu",
+											"default": "[\n\t$0\n]\n"
+										}
+									},
+									{
+										"caption": "Main Menu",
+										"command": "z_edit_settings",
+										"args":
+										{
+											"is_parent_setting": "1",
+											"base_file": "${packages}/Log Highlight/Main.sublime-menu",
+											"default": "[\n\t$0\n]\n"
+										}
+									}
+								]
+							},
+							{
+								"caption": "Commands",
+								"command": "z_edit_settings",
+								"args":
+								{
+									"is_parent_setting": "1",
+									"base_file": "${packages}/Log Highlight/Default.sublime-commands",
+									"default": "[\n\t$0\n]\n"
+								}
+							},
+							{ "caption": "-" },
+							{
+								"caption": "README",
+								"command": "open_file",
+								"args": { "file": "${packages}/Log Highlight/README.md" }
 							}
 						]
 					}
