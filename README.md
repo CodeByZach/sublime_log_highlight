@@ -1,12 +1,12 @@
 # Log Highlight for Sublime Text
 
 [![Package Control](https://packagecontrol.herokuapp.com/downloads/Log%20Highlight.svg?style=round-square)](https://packagecontrol.io/packages/Log%20Highlight)
-[![PayPal](https://img.shields.io/badge/paypal-donate-blue.svg)][PM]
+[![Latest Release](https://img.shields.io/github/tag/EatBreatheCode/sublime_trimmer.svg?label=version)](https://github.com/EatBreatheCode/sublime_trimmer/releases)
 
 Log Highlight helps to view a log (any type) with customizable error/warning syntax & color scheme & extensible severity levels.
 Open a log file (like .log) and run __*Log Highlight*__ in the context menu or __*Log Highlight : Highlight Error/Warning*__ in the command palette.
 
-(Compile Log - auto-highlight off (summary panel is deprecated))  
+(Compile Log - auto-highlight off (summary panel is deprecated))
 ![Image of Log Highlight](docs/lh-log.gif)
 
 (Build Window - auto-highlight on)
@@ -40,7 +40,7 @@ You can add, remove, change severity levels like debug/notice/emergency in __*Lo
 #### Separate Log Types
 
 You can set the log type in settings
-. "compile" type : link / bookmark can be activated  
+. "compile" type : link / bookmark can be activated
 . "system" type  : color-highlight only (fast)
 
 #### Support multiple kinds of logs
@@ -95,5 +95,5 @@ error ../src/foo.cpp:40
 
 - __Restore Settings__
 
-Use __*Log Highlight: Erase Syntax & Theme*__ in the command palette Or  
+Use __*Log Highlight: Erase Syntax & Theme*__ in the command palette Or
 Just remove __*Packages/User/Log Highlight*__
