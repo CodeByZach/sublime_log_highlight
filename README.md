@@ -1,5 +1,4 @@
 # Log Highlight for Sublime Text
-
 [![Latest Release](https://img.shields.io/github/tag/EatBreatheCode/sublime_log_highlight.svg?label=version)](https://github.com/EatBreatheCode/sublime_log_highlight/releases)
 [![Package Control](https://packagecontrol.herokuapp.com/downloads/Log%20Highlight.svg?style=round-square)](https://packagecontrol.io/packages/Log%20Highlight)
 
