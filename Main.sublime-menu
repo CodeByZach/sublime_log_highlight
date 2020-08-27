@@ -26,16 +26,6 @@
 							},
 							{ "caption": "-" },
 							{
-								"caption": "Key Bindings",
-								"command": "edit_settings",
-								"args":
-								{
-									"base_file": "${packages}/Log Highlight/Default (${platform}).sublime-keymap",
-									"default": "[\n\t$0\n]\n"
-								}
-							},
-							{ "caption": "-" },
-							{
 								"caption": "Menus",
 								"children":
 								[

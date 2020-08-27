@@ -5,116 +5,114 @@
 	// Auto Highlight for a log file, build window.
 	"auto_highlight": true,
 
-	// Output panel list for Auto Highlight.
-	"auto_highlight_output_panel": [ "exec" ],
+	// Output panel list for Auto Highlight (exec = build)
+	"auto_highlight_output_panel" : [ "exec" ],
 
-	// Log file extension
-	"log_ext": [ ".log" ], // Use ".*" for all file extensions - but can not use "Auto Highlight".
+	// Log List
+	"log_list" : {
+		"example" : {
+			// "compile" - link, summary, bookmark are usable, "system" - only for highlight.
+			"type" : "compile",
 
-	// "compile" - link, summary, bookmark are usable, "system" - only for highlight.
-	"log_type": "compile",
+			// Log file extension
+			"extension" : [ "*.log", ".vcs.log", ".cpp.log", "message*" ],
 
-	// Use clickable link or not.
-	"use_link": true,
+			// exec - to apply to build results.
+			"output.panel" : [ "exec" ],
 
-	// Search base directory automatically for relative path.
-	"search_base": {
-		"enable": true,
-		// Hidden folders are ignored as default, like .git, .svn
-		"ignore_dir": [""],
-		// Adjust when using network like samba.
-		"max_scan_path": 1000
-	},
+			// Use clickable link or not.
+			"use_link" : true,
 
-	// Show summary panel.
-	"summary_panel": true,
-
-	// Enable/disable bookmarks.
-	"bookmark_enable": true,
-	// Automatically go to 1st error line.
-	"bookmark_goto_error": true,
-
-	// Log Syntax, Color scheme (severity level).
-	"severity": {
-		"error": {
-			"enable": true,
-			"summary": true,
-			"pattern": [
-				// [ "begin regex", "end regex" ] or [ "match regex", "" ]
-				[ "^Error-\\[", "^\\s*[\\n]" ],                      // Error-[ ~ next empty line (multi-line)
-				[ "^{{{LINK}}}?[^\\r\\n]*?(?i)error", "[\\r\\n]" ],  // A line including case-insensitive 'error' with or without a link in front of 'error'.
-				[ "^\\w+:\\s*\\*E", "[\\r\\n]" ]                     // ...: *E ... (single line)
-				// <-- Remove, Change, Add More Patterns Here -->
-			],
-			"color": {
-				// Error message.
-				"base": "#F92672",
-				// Link in error message.
-				"link": "#E6DB74",
-				// Quote in error message.
-				"quote": "#4F99D3"
+			// Search base directory automatically for relative path.
+			"search_base" : {
+				// false : when using absolute path.
+				"enable" : true,
+				// Hidden folders are ignored as default, like .git, .svn
+				"ignore_dir" : [""],
+				// Adjust when using network like samba.
+				"max_scan_path" : 1000
 			},
-			// Remove "icon" not to use icon, "dot", "circle" "bookmark" are possible.
-			"icon": "Danish Royalty/error.png"
-		},
 
-		// Warning.
-		"warning": {
-			"enable": true,
-			"summary": true,
-			"pattern": [
-				// [ "begin regex", "end regex" ] or [ "match regex", "" ]
-				[ "^Warning-\\[", "^\\s*[\\n]" ],                    // Warning-[ ~ next empty line (multi-line)
-				[ "^{{{LINK}}}?[^\\r\\n]*?(?i)warning", "[\\r\\n]" ],// A line including case-insensitive 'warning' with or without a link in front of 'warning'.
-				[ "^\\w+:\\s*\\*W", "[\\r\\n]" ]                     // ...: *W ... (single line)
-				// <-- Remove, Change, Add More Patterns Here -->
-			],
-			"color": {
-				// Warning message.
-				"base": "#A1B347",
-				// Link in warning message.
-				"link": "#FD971F",
-				// Quote in warning message.
-				"quote": "#4F99D3"
+			// Enable/disable bookmarks.
+			"bookmark" : {
+				// false : do not display icons too.
+				"enable" : true,
+				// Automatically goto 1st error line.
+				"goto_error" : true
 			},
-			// Remove "icon" not to use icon, "dot", "circle" "bookmark" are possible.
-			"icon": "Danish Royalty/warning.png"
-		},
 
-		// Info.
-		"info": {
-			"enable": false,
-			"summary": false,
-			"pattern": [
-				// [ "begin regex", "end regex" ] or [ "match regex", "" ]
-				[ "^Information-\\[", "^\\s*[\\n]" ], // Information-[ ~ next empty line (multi-line)
-				[ "^\\[INFO\\]", "[\\r\\n]" ]         // [INFO] ... (single line)
-				// <-- Remove, Change, Add More Patterns Here -->
-			],
-			"color": {
-				// Info message.
-				"base": "#70991f",
-				// Link in info message.
-				"link": "#b36915",
-				// Quote in info message.
-				"quote": "#428a99"
+			// Log Syntax, Color scheme (severity level).
+			"severity" : {
+				// Error
+				"error" : {
+					"enable" : true,
+					"pattern" : [
+						// [ "begin regex", "end regex" ] or [ "match regex", "" ]
+						[ "^Error-\\[", "^\\s*[\\n]" ],                      // Error-[ ~ next empty line (multi-line)
+						[ "^{{{LINK}}}?[^\\r\\n]*?(?i)error", "[\\r\\n]" ],  // A line including case-insensitive 'error' with or without a link in front of 'error'.
+						[ "^\\w+:\\s*\\*E", "[\\r\\n]" ]                     // ...: *E ... (single line)
+						// <-- Remove, Change, Add More Patterns Here -->
+					],
+					"color" : {
+						// ["foreground", "background"]
+						"base"  : ["#F92672", ""], // Error message.
+						"link"  : ["#E6DB74", ""], // Link in error message.
+						"quote" : ["#4F99D3", ""], // Quote in error message.
+					},
+					// Remove "icon" not to use icon, "dot", "circle" "bookmark" are possible.
+					"icon" : "Danish Royalty/error.png"
+				},
+
+				// Warning
+				"warning" : {
+					"enable" : true,
+					"pattern" : [
+						// [ "begin regex", "end regex" ] or [ "match regex", "" ]
+						[ "^Warning-\\[", "^\\s*[\\n]" ],                      // Warning-[ ~ next empty line (multi-line)
+						[ "^{{{LINK}}}?[^\\r\\n]*?(?i)warning", "[\\r\\n]" ],  // A line including case-insensitive 'warning' with or without a link in front of 'warning'.
+						[ "^\\w+:\\s*\\*W", "[\\r\\n]" ]                       // ...: *W ... (single line)
+						// <-- Remove, Change, Add More Patterns Here -->
+					],
+					"color" : {
+						// ["foreground", "background"]
+						"base"  : ["#A1B347", ""], // Warning message.
+						"link"  : ["#FD971F", ""], // Link in warning message.
+						"quote" : ["#4F99D3", ""], // Quote in warning message.
+					},
+					// Remove "icon" not to use icon, "dot", "circle" "bookmark" are possible.
+					"icon" : "Danish Royalty/warning.png",
+				},
+
+				// Info
+				"info" : {
+					"enable" : false,
+					"pattern" : [
+						// [ "begin regex", "end regex" ] or [ "match regex", "" ]
+						[ "^Information-\\[", "^\\s*[\\n]" ],  // Information-[ ~ next empty line (multi-line)
+						[ "^\\[INFO\\]", "[\\r\\n]" ]          // [INFO] ... (single line)
+						// <-- Remove, Change, Add More Patterns Here -->
+					],
+					"color" : {
+						// ["foreground", "background"]
+						"base"  : ["#70991F", ""], // Info message.
+						"link"  : ["#B36915", ""], // Link in info message.
+						"quote" : ["#428A99", ""], // Quote in info message.
+					},
+					// Remove "icon" not to use icon, "dot", "circle" "bookmark" are possible.
+					"icon" : "Danish Royalty/info.png"
+				},
+				// <-- Remove, Change, Add More Severity Level Here -->
 			},
-			// Remove "icon" not to use icon, "dot", "circle" "bookmark" are possible.
-			"icon": "Danish Royalty/info.png"
+
+			// Theme color set.
+			"theme" : {
+				"foreground"      : "#D7D7D7",
+				"caret"           : "#F29718",
+				"selection"       : "#3A5166",
+				"selectionBorder" : "#181E26",
+				"lineHighlight"   : "#283240"
+			}
 		},
-
-		// <-- Remove, Change, Add More Severity Level Here -->
-	},
-
-	// Theme color set.
-	"theme_color": {
-		"background"      : "#161C23",
-		"foreground"      : "#D7D7D7",
-		"caret"           : "#F29718",
-		"selection"       : "#3A5166",
-		"selectionBorder" : "#181E26",
-		"lineHighlight"   : "#283240",
-		"summary_title"   : "#D7D7D7"
+		// <-- remove, change, add more log list here -->
 	}
-
 }
