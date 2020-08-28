@@ -641,7 +641,7 @@ class LogHighlightEvent(sublime_plugin.EventListener):
 			return
 		if check_view_log(view):
 			view.run_command("log_highlight")
-				return
+		return
 
 ##  class LogHighlightRefreshThread  __________________________
 
@@ -935,10 +935,10 @@ class LogHighlightThread(threading.Thread):
 			return
 		# goto 1st error line
 		if bmkgo:
-		if 'error' in self.regions:
-			region = self.regions['error']
-			if len(region) > 0:
-				self.goto_line = region[0]
+			if 'error' in self.regions:
+				region = self.regions['error']
+				if len(region) > 0:
+					self.goto_line = region[0]
 		# bookmark icon / navigation
 		regions_all = []
 		for i, k in enumerate(svl):
