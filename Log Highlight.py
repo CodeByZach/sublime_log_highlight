@@ -50,7 +50,6 @@ OUT_DIC = {}
 ##  global functions  _________________________________________
 
 def plugin_loaded():
-
 	if package_control_installed and (events.install('Log Highlight') or events.post_upgrade('Log Highlight')):
 		sublime.set_timeout_async(loaded, 5000)
 	else:
@@ -67,7 +66,6 @@ def plugin_unloaded():
 
 
 def loaded():
-
 	# default tmTheme
 	gen_tmtheme()
 
@@ -240,14 +238,14 @@ def set_syntax_theme(view, log_name):
 			gen_tmtheme()
 			change_bgcolor(etheme, bgclr)
 			sublime.set_timeout_async(lambda: set_as_default_theme(view), 0)
-	else:
+		else:
 			change_bgcolor(etheme, bgclr)
 			set_as_default_theme(view)
 
 
 def fwrite(fname, text):
 	try:
-			with open(fname, "w", newline="") as f:
+		with open(fname, "w", newline="") as f:
 			f.write(text)
 	except Exception:
 		disp_exept()
@@ -256,8 +254,8 @@ def fwrite(fname, text):
 def fread(fname):
 	text = ""
 	try:
-			with open(fname, "r") as f:
-				text = str(f.read())
+		with open(fname, "r") as f:
+			text = str(f.read())
 	except Exception:
 		disp_exept()
 		return text
