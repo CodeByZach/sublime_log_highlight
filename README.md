@@ -1,5 +1,5 @@
 # Log Highlight for Sublime Text
-[![Latest Release](https://img.shields.io/github/tag/EatBreatheCode/sublime_log_highlight.svg?label=version)](https://github.com/EatBreatheCode/sublime_log_highlight/releases)
+[![Latest Release](https://img.shields.io/github/tag/CodeByZach/sublime_log_highlight.svg?label=version)](https://github.com/CodeByZach/sublime_log_highlight/releases)
 [![Package Control](https://packagecontrol.herokuapp.com/downloads/Log%20Highlight.svg?style=round-square)](https://packagecontrol.io/packages/Log%20Highlight)
 
 Log Highlight helps to view a log (any type) with customizable error/warning syntax & color scheme & extensible severity levels.
@@ -72,7 +72,7 @@ Log Highlight can be used for Build Window or Unsaved View. But relative path li
 
 ### Settings
 
-Please, refer to [__Log Highlight.sublime-settings__](https://github.com/EatBreatheCode/sublime_log_highlight/blob/master/Log%20Highlight.sublime-settings), Available Icons : [__Icon List__](https://github.com/EatBreatheCode/sublime_log_highlight/tree/master/icons)
+Please, refer to [__Log Highlight.sublime-settings__](https://github.com/CodeByZach/sublime_log_highlight/blob/master/Log%20Highlight.sublime-settings), Available Icons : [__Icon List__](https://github.com/CodeByZach/sublime_log_highlight/tree/master/icons)
 
 - __Regular Expression Pattern in Settings__
 
