@@ -1,4 +1,4 @@
 [
-	{ "caption": "-", "id": "log_highlight" },
-	{ "command": "log_highlight", "caption": "Log Highlight" }
+    { "caption": "-", "id": "log_highlight" },
+    { "command": "log_highlight", "caption": "Log Highlight" }
 ]
