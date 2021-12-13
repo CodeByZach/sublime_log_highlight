@@ -112,10 +112,15 @@ def get_log_extension():
 
 
 def get_log_name(view):
-    _name = view.file_name() if view.name() == "" else view.name()
+    if view.name() == "":
+        isfile = True
+        _name  = view.file_name()
+    else:
+        isfile = False
+        _name  = view.name()
     if not _name:
         return None
-    basen = os.path.basename(_name).lower()
+    basen = os.path.basename(_name).lower() if isfile else _name
     exdic = list(EXT_DIC.keys())
     for ext in exdic:
         if ext[-1] == '*' and basen.startswith(ext[0:-1]):
@@ -128,10 +133,15 @@ def get_log_name(view):
 
 
 def check_view_log(view):
-    _name = view.file_name() if view.name() == "" else view.name()
+    if view.name() == "":
+        isfile = True
+        _name  = view.file_name()
+    else:
+        isfile = False
+        _name  = view.name()
     if not _name:
-        return True
-    basen = os.path.basename(_name).lower()
+        return None
+    basen = os.path.basename(_name).lower() if isfile else _name
     for ext in EXT_ALL:
         if ext[-1] == '*' and basen.startswith(ext[0:-1]):
             return True
@@ -157,11 +167,18 @@ def check_logh_views():
 
 
 def get_style():
-    view = sublime.active_window().new_file()
-    style = view.style()
-    sublime.active_window().focus_view(view)
-    sublime.active_window().run_command('close_file')
-    return style
+    aview = sublime.active_window().active_view()
+    prefs = sublime.load_settings("Preferences.sublime-settings")
+    cschm = prefs.get('color_scheme')
+    viewc = '' if aview is None else aview.settings().get('color_scheme')
+    if aview is None or cschm != viewc:
+        view = sublime.active_window().new_file()
+        style = view.style()
+        sublime.active_window().focus_view(view)
+        sublime.active_window().run_command('close_file')
+        return style
+    else:
+        return aview.style()
 
 
 def get_background():
@@ -590,6 +607,9 @@ class LogHighlightCommand(sublime_plugin.TextCommand):
 ##  class LogHighlightEvent  __________________________________
 
 class LogHighlightEvent(sublime_plugin.EventListener):
+
+    def on_new_async(self, view):
+        self.auto_highlight(view)
 
     def on_load_async(self, view):
         self.auto_highlight(view)
