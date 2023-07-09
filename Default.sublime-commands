@@ -1,5 +1,5 @@
 [
     { "caption": "Log Highlight: Highlight Error/Warning", "command": "log_highlight" },
     { "caption": "Log Highlight: Generate Syntax & Theme", "command": "log_highlight_gen_syntax_theme" },
-    { "caption": "Log Highlight: Erase Syntax & Theme", "command": "log_highlight_erase_syntax_theme" }
+    { "caption": "Log Highlight: Erase Syntax & Theme",    "command": "log_highlight_erase_syntax_theme" }
 ]
