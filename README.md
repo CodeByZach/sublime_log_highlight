@@ -1,6 +1,6 @@
 # Log Highlight for Sublime Text
 [![Latest Release](https://img.shields.io/github/tag/CodeByZach/sublime_log_highlight.svg?label=version)](https://github.com/CodeByZach/sublime_log_highlight/releases)
-[![Package Control](https://packagecontrol.herokuapp.com/downloads/Log%20Highlight.svg?style=round-square)](https://packagecontrol.io/packages/Log%20Highlight)
+[![Package Control](https://img.shields.io/packagecontrol/dt/Log%20Highlight.svg?labelColor=333333&logo=sublime%20text)](https://packagecontrol.io/packages/Log%20Highlight)
 
 Log Highlight helps to view a log (any type) with customizable error/warning syntax & color scheme & extensible severity levels.
 Open a log file (like .log) and run __*Log Highlight*__ in the context menu or __*Log Highlight : Highlight Error/Warning*__ in the command palette.
