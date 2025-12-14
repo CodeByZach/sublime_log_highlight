@@ -2,4 +2,7 @@
 .gitattributes export-ignore
 
 # Files & folders that should not be included in production.
-/docs/ export-ignore
+/.github/        export-ignore
+/.python-version export-ignore
+/docs/           export-ignore
+/tox.ini         export-ignore
