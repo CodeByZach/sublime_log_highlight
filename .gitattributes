@@ -3,6 +3,5 @@
 
 # Files & folders that should not be included in production.
 /.github/        export-ignore
-/.python-version export-ignore
 /docs/           export-ignore
 /tox.ini         export-ignore
