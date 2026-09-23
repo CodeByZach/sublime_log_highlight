@@ -450,8 +450,8 @@ class LogHighlightGenSyntaxThemeCommand(sublime_plugin.TextCommand):
         return lq_tmlang
 
     def conv_for_plist(self, _str):
-        _str = re.sub('\<', '&lt;', _str)
-        _str = re.sub('\>', '&gt;', _str)
+        _str = re.sub(r'\<', '&lt;', _str)
+        _str = re.sub(r'\>', '&gt;', _str)
         return _str
 
     def conv_for_regx(self, _str):
